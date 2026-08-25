@@ -1,0 +1,51 @@
+{
+  "openevalz_version": 1,
+  "eval": {
+    "id": "agentharm",
+    "slug": "agentharm",
+    "title": "AgentHarm: Harmfulness Potential in AI Agents",
+    "group": "Safeguards",
+    "tags": [
+      "Agent"
+    ],
+    "source": "core"
+  },
+  "upstream": {
+    "repo": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "path": "src/inspect_evals/agentharm",
+    "inspect_ai": "0.3.260",
+    "eval_version": "8-B",
+    "dependency": ""
+  },
+  "execution": {
+    "class": "plain",
+    "cost_class": "low",
+    "sandbox": null,
+    "requires_internet": false,
+    "fast": false,
+    "supports_k8s": false,
+    "environment": ""
+  },
+  "tasks": [
+    {
+      "name": "agentharm",
+      "samples": 176
+    },
+    {
+      "name": "agentharm_benign",
+      "samples": 176
+    }
+  ],
+  "total_samples": 352,
+  "external_assets": [
+    {
+      "type": "huggingface",
+      "source": "ai-safety-institute/AgentHarm",
+      "state": "pinned"
+    }
+  ],
+  "scaffolds": [
+    "baseline"
+  ],
+  "generated": "2026-08-25"
+}
